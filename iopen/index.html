@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- Melhor renderização em dispositivos móveis -->
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="width" />
+    
+    <title>Iopen - Investimentos Automatizados</title>
+    <meta name="description" content="Iopen - Plataforma de investimentos automatizados que revoluciona a experiência financeira através da tecnologia avançada e análise detalhada de dados via open finance." />
+    
+    <!-- Pré-carregamento de fontes comuns -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Suporte de manifesto para aplicativo web -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Impede o destaque azul em cliques para dispositivos móveis -->
+    <style>
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
+      html {
+        touch-action: manipulation;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        overscroll-behavior-y: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #root {
+        width: 100%;
+        height: 100%;
+      }
+      @media (max-width: 768px) {
+        input, select, textarea {
+          font-size: 16px !important; /* Evita zoom automático em campos de formulário no iOS */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <div style="text-align: center; padding: 20px;">
+        Para utilizar o Iopen, você precisa habilitar o JavaScript no seu navegador.
+      </div>
+    </noscript>
+  </body>
+</html>
