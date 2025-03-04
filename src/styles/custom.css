@@ -1,0 +1,251 @@
+/* Estilos personalizados para o site Iopen */
+
+/* Scroll customizado */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #2AA0E5;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #367BF2;
+}
+
+/* Utilitários específicos para dispositivos móveis */
+.touch-highlight-none {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.touch-target {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animações */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gradientes modernos Iopen */
+.gradient-iopen-blue {
+  background: linear-gradient(135deg, #2AA0E5 0%, #418AF4 100%);
+}
+
+.gradient-iopen-dark {
+  background: linear-gradient(135deg, #367BF2 0%, #283D40 100%);
+}
+
+/* Efeitos de elevação */
+.elevation-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.elevation-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.elevation-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* Transições suaves */
+.transition-all-300 {
+  transition: all 0.3s ease;
+}
+
+/* Correções específicas para iOS */
+@supports (-webkit-touch-callout: none) {
+  .ios-height-fix {
+    height: -webkit-fill-available;
+  }
+  
+  .ios-padding-fix {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Correção para sobreposição do header */
+.header-spacing {
+  padding-top: 80px;
+}
+
+/* Estilos para a página de login/chat */
+.chat-container {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.message-bubble-user {
+  border-radius: 18px 18px 0 18px; 
+  background: linear-gradient(135deg, #367BF2 0%, #418AF4 100%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: #FEFEFE;
+  word-break: break-word;
+  max-width: 90%;
+}
+
+.message-bubble-assistant {
+  border-radius: 18px 18px 18px 0;
+  background: #E8F4FE;
+  border: 1px solid #2AA0E5;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  color: #283D40;
+  word-break: break-word;
+  max-width: 90%;
+}
+
+@media (max-width: 640px) {
+  .message-bubble-user,
+  .message-bubble-assistant {
+    max-width: 85%;
+    padding: 0.75rem 1rem;
+  }
+  
+  .message-bubble-user {
+    margin-left: auto;
+  }
+  
+  .message-bubble-assistant {
+    margin-right: auto;
+  }
+}
+
+/* Input com efeito de foco melhorado */
+.input-focus-effect:focus {
+  box-shadow: 0 0 0 2px rgba(54, 123, 242, 0.3);
+  border-color: #2AA0E5;
+}
+
+/* Botão com efeito de hover */
+.button-pulse:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(42, 160, 229, 0.2);
+}
+
+/* Backgrounds sutis */
+.subtle-pattern {
+  background-color: #FEFEFE;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232AA0E5' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Estilos para o conteúdo markdown */
+.markdown-content strong {
+  font-weight: 700;
+}
+
+.message-bubble-assistant .markdown-content strong {
+  color: #367BF2; /* Cor de destaque para negrito no chat do assistente */
+}
+
+.message-bubble-user .markdown-content strong {
+  color: #FEFEFE; /* Cor de destaque para negrito no chat do usuário */
+}
+
+.markdown-content p {
+  margin-bottom: 0.5rem;
+}
+
+.markdown-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Seleção de texto nas cores da marca */
+::selection {
+  background-color: #2AA0E5;
+  color: #FEFEFE;
+}
+
+/* Estilos para os botões de resposta rápida */
+.quick-response-button {
+  background-color: #2AA0E5;
+  color: #FEFEFE;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-height: 36px;
+  min-width: 90px;
+  text-align: center;
+  justify-content: center;
+  margin: 0.25rem;
+  box-shadow: 0 2px 4px rgba(42, 160, 229, 0.25);
+  -webkit-tap-highlight-color: transparent;
+  font-size: 0.875rem;
+}
+
+/* Adicionar media query especificamente para telas mobile */
+@media (max-width: 640px) {
+  .quick-response-button {
+    padding: 0.35rem 0.6rem;
+    min-height: 32px;
+    min-width: 80px;
+    font-size: 0.75rem;
+    margin: 0.2rem;
+  }
+  
+  .quick-response-button svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.quick-response-button:hover, 
+.quick-response-button:active {
+  background-color: #418AF4;
+  color: #FEFEFE;
+  transform: translateY(-1px);
+}
+
+.quick-response-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(42, 160, 229, 0.25);
+}
+
+/* Estilos para o cabeçalho */
+.iopen-header {
+  background: linear-gradient(135deg, #2AA0E5 0%, #418AF4 100%);
+  color: #FEFEFE;
+  border-bottom: 1px solid #367BF2;
+}
+
+/* Estilos para o rodapé da mensagem */
+.message-footer-user {
+  color: #E8F4FE;
+  font-size: 0.75rem;
+}
+
+.message-footer-assistant {
+  color: #2AA0E5;
+  font-size: 0.75rem;
+}

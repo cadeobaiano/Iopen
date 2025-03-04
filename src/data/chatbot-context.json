@@ -1,0 +1,303 @@
+{
+  "chatbot": {
+    "name": "Iop",
+    "fullName": "IOPenildo, oráculo dos investimentos da Silva Junior",
+    "description": "Chatbot especialista em investimentos da Iopen",
+    "apiIntegration": "OpenAI"
+  },
+  "stages": [
+    {
+      "id": "intro",
+      "name": "Apresentação do Iop",
+      "defaultMessage": "Olá, eu sou o IOP, o especialista de investimentos do futuro. Antes de descobrirmos a nota da sua carteira, preciso conhecer um pouco mais sobre você. Mas não se preocupe: é rápido e terminaremos antes mesmo de você conseguir pronunciar meu nome! Podemos começar?",
+      "quickResponses": [
+        {
+          "text": "Sim, podemos",
+          "value": "sim"
+        },
+        {
+          "text": "Claro, vamos lá",
+          "value": "sim"
+        },
+        {
+          "text": "Pode perguntar",
+          "value": "sim"
+        }
+      ],
+      "nextStage": "platform"
+    },
+    {
+      "id": "platform",
+      "name": "Apresentação da plataforma",
+      "defaultMessage": "Deixe-me explicar de forma simples como a nossa plataforma funciona. A Iopen é uma solução automatizada que utiliza seus dados financeiros para revelar como os bancos tradicionais exploram seus clientes, evidenciando taxas e impostos excessivos que minam seus ganhos. Com base nessa análise, propomos duas estratégias de investimento:\nCrescimento Patrimonial: Focado em maximizar seus ativos por meio de ETFs e títulos do tesouro.\nObjetivos Específicos: Direcionado para metas concretas, como a aposentadoria, que ajudam a realizar seus sonhos e projetos pessoais.\nNossa missão é promover uma gestão transparente e eficiente, devolvendo o controle da carteira para você. Vale ressaltar que, embora esta primeira conversa seja comigo, um chatbot, nossa plataforma conta com atendimento humano especializado sempre que necessário.",
+      "quickResponses": [
+        {
+          "text": "Gostei, quero ser Iopen!",
+          "value": "positivo"
+        },
+        {
+          "text": "Interessante, continue",
+          "value": "neutro"
+        },
+        {
+          "text": "Parece promissor",
+          "value": "positivo"
+        }
+      ],
+      "nextStage": "goals"
+    },
+    {
+      "id": "goals",
+      "name": "Coleta de sonhos e objetivos",
+      "defaultMessage": "Agora, me conte: Quais são os seus principais objetivos financeiros – seja para viagens, a realização de sonhos ou outros projetos. Pode caprichar na resposta que eu entendo tudo!",
+      "quickResponses": [
+        {
+          "text": "Preservar meu patrimônio",
+          "value": "preservacao"
+        },
+        {
+          "text": "Crescimento patrimonial",
+          "value": "crescimento"
+        },
+        {
+          "text": "Aposentadoria tranquila",
+          "value": "aposentadoria"
+        },
+        {
+          "text": "Viagens e lazer",
+          "value": "viagens"
+        },
+        {
+          "text": "Educação dos filhos",
+          "value": "educacao"
+        }
+      ],
+      "nextStage": "profile"
+    },
+    {
+      "id": "profile",
+      "name": "Perfil de investidor",
+      "defaultMessage": "E como você definiria o seu perfil de investidor? Você é mais conservador, moderado, agressivo?",
+      "quickResponses": [
+        {
+          "text": "Conservador",
+          "value": "conservador"
+        },
+        {
+          "text": "Moderado",
+          "value": "moderado"
+        },
+        {
+          "text": "Agressivo",
+          "value": "agressivo"
+        }
+      ],
+      "nextStage": "volume"
+    },
+    {
+      "id": "volume",
+      "name": "Volume investido",
+      "defaultMessage": "Atualmente, qual o seu volume investido?",
+      "quickResponses": [
+        {
+          "text": "De R$ 10 mil a R$ 100 mil",
+          "value": "10k-100k"
+        },
+        {
+          "text": "De R$ 100 mil a R$ 300 mil",
+          "value": "100k-300k"
+        },
+        {
+          "text": "De R$ 300 mil a R$ 500 mil",
+          "value": "300k-500k"
+        },
+        {
+          "text": "De R$ 500 mil a R$ 1 milhão",
+          "value": "500k-1mm"
+        },
+        {
+          "text": "Mais de R$ 1 milhão",
+          "value": "1mm+"
+        }
+      ],
+      "nextStage": "closing"
+    },
+    {
+      "id": "closing",
+      "name": "Fechamento",
+      "defaultMessage": "Agora que já conhecemos seu perfil, temos plena confiança de que podemos atendê-lo com excelência!\n\nCom base no seu perfil, nosso plano Smart parece ser a opção ideal. Ele custa {managementFee}% ao ano, sendo mais de quatro vezes mais barato do que um banco ou uma corretora tradicional. Estimamos que, com o valor investido atualmente, podemos gerar pelo menos R$ {estimatedSavings} em lucros adicionais todo ano, apenas evitando custos desnecessários e investindo de forma descomplicada.\n\nAh, e para os mais curiosos: meu nome completo é IOPenildo, oráculo dos investimentos da Silva Junior. Agradeço por compartilhar suas informações. Estamos ansiosos para guiá-lo rumo a uma gestão financeira mais transparente e eficiente!",
+      "quickResponses": [
+        {
+          "text": "Iniciar período de teste",
+          "value": "teste"
+        },
+        {
+          "text": "Quero conhecer mais",
+          "value": "mais_info"
+        },
+        {
+          "text": "Falar com um especialista",
+          "value": "especialista"
+        }
+      ],
+      "nextStage": "completed"
+    },
+    {
+      "id": "completed",
+      "name": "Finalizado",
+      "defaultMessage": "Ótimo! Você tomou uma decisão inteligente. Um de nossos especialistas entrará em contato em breve para finalizar seu cadastro e iniciar seu período de teste. Obrigado por escolher a Iopen!",
+      "quickResponses": [
+        {
+          "text": "Entendido",
+          "value": "entendido"
+        },
+        {
+          "text": "Conhecer mais serviços",
+          "value": "servicos"
+        }
+      ],
+      "nextStage": null
+    }
+  ],
+  "calculations": {
+    "managementFee": {
+      "description": "Cálculo da taxa de gestão com base no perfil e volume",
+      "baseRates": {
+        "conservador": {
+          "10k-100k": 0.7,
+          "100k-300k": 0.6,
+          "300k-500k": 0.5,
+          "500k-1mm": 0.45,
+          "1mm+": 0.4
+        },
+        "moderado": {
+          "10k-100k": 0.8,
+          "100k-300k": 0.7,
+          "300k-500k": 0.6,
+          "500k-1mm": 0.5,
+          "1mm+": 0.45
+        },
+        "agressivo": {
+          "10k-100k": 0.75,
+          "100k-300k": 0.65,
+          "300k-500k": 0.55,
+          "500k-1mm": 0.6,
+          "1mm+": 0.5
+        }
+      },
+      "minRate": 0.4,
+      "maxRate": 0.8
+    },
+    "estimatedSavings": {
+      "description": "Cálculo da economia estimada com base no volume investido",
+      "annualRate": 0.0345016,
+      "volumeRanges": {
+        "10k-100k": {
+          "min": 10000,
+          "max": 100000,
+          "average": 55000
+        },
+        "100k-300k": {
+          "min": 100000,
+          "max": 300000,
+          "average": 200000
+        },
+        "300k-500k": {
+          "min": 300000,
+          "max": 500000,
+          "average": 400000
+        },
+        "500k-1mm": {
+          "min": 500000,
+          "max": 1000000,
+          "average": 750000
+        },
+        "1mm+": {
+          "min": 1000000,
+          "max": 2000000,
+          "average": 1500000
+        }
+      }
+    }
+  },
+  "databaseMapping": {
+    "tables": {
+      "chat_interactions": {
+        "columns": [
+          "id",
+          "user_id",
+          "session_id",
+          "investment_value",
+          "investor_profile",
+          "goals",
+          "recommended_rate",
+          "estimated_savings",
+          "accepted_proposal",
+          "created_at"
+        ]
+      },
+      "chat_messages": {
+        "columns": [
+          "id",
+          "interaction_id",
+          "sender",
+          "content",
+          "stage",
+          "timestamp"
+        ]
+      }
+    },
+    "dataMapping": {
+      "intro": {
+        "table": "chat_messages",
+        "relevantFields": ["content", "stage"]
+      },
+      "platform": {
+        "table": "chat_messages",
+        "relevantFields": ["content", "stage"]
+      },
+      "goals": {
+        "table": "chat_interactions",
+        "relevantFields": ["goals"]
+      },
+      "profile": {
+        "table": "chat_interactions",
+        "relevantFields": ["investor_profile"]
+      },
+      "volume": {
+        "table": "chat_interactions",
+        "relevantFields": ["investment_value"]
+      },
+      "closing": {
+        "table": "chat_interactions",
+        "relevantFields": ["recommended_rate", "estimated_savings", "accepted_proposal"]
+      }
+    }
+  },
+  "exampleInteraction": {
+    "intro": {
+      "bot": "Olá, eu sou o IOP, o especialista de investimentos do futuro. Antes de descobrirmos a nota da sua carteira, preciso conhecer um pouco mais sobre você. Mas não se preocupe: é rápido e terminaremos antes mesmo de você conseguir pronunciar meu nome! Podemos começar?",
+      "user": "Sim, podemos."
+    },
+    "platform": {
+      "bot": "Deixe-me explicar de forma simples como a nossa plataforma funciona. A Iopen é uma solução automatizada que utiliza seus dados financeiros para revelar como os bancos tradicionais exploram seus clientes, evidenciando taxas e impostos excessivos que minam seus ganhos. Com base nessa análise, propomos duas estratégias de investimento:\nCrescimento Patrimonial: Focado em maximizar seus ativos por meio de ETFs e títulos do tesouro.\nObjetivos Específicos: Direcionado para metas concretas, como a aposentadoria, que ajudam a realizar seus sonhos e projetos pessoais.\nNossa missão é promover uma gestão transparente e eficiente, devolvendo o controle da carteira para você. Vale ressaltar que, embora esta primeira conversa seja comigo, um chatbot, nossa plataforma conta com atendimento humano especializado sempre que necessário.",
+      "user": "Gostei, quero ser Iopen!"
+    },
+    "goals": {
+      "bot": "Agora, me conte: Quais são os seus principais objetivos financeiros – seja para viagens, a realização de sonhos ou outros projetos. Pode caprichar na resposta que eu entendo tudo!",
+      "user": "Quero preservar meu patrimônio."
+    },
+    "profile": {
+      "bot": "E como você definiria o seu perfil de investidor? Você é mais conservador, moderado, agressivo?",
+      "user": "Sou agressivo"
+    },
+    "volume": {
+      "bot": "Atualmente, qual o seu volume investido?",
+      "user": "500 mil a 1 milhão"
+    },
+    "closing": {
+      "bot": "Agora que já conhecemos seu perfil, temos plena confiança de que podemos atendê-lo com excelência!\n\nCom base no seu perfil, nosso plano Smart parece ser a opção ideal. Ele custa 0.6% ao ano, sendo mais de quatro vezes mais barato do que um banco ou uma corretora tradicional. Estimamos que, com o valor investido atualmente, podemos gerar pelo menos R$ 17.250,80 em lucros adicionais todo ano, apenas evitando custos desnecessários e investindo de forma descomplicada.\n\nAh, e para os mais curiosos: meu nome completo é IOPenildo, oráculo dos investimentos da Silva Junior. Agradeço por compartilhar suas informações. Estamos ansiosos para guiá-lo rumo a uma gestão financeira mais transparente e eficiente!",
+      "user": "Iniciar período de teste"
+    }
+  }
+} 
